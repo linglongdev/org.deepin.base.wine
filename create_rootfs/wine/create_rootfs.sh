@@ -28,7 +28,6 @@ case $arch in
     "") echo "enter an architecture, like ./create_rootfs.sh runtime amd64" && exit;;
     *) echo "unknow arch \"$arch\", supported arch: amd64, arm64, loongarch64" && exit;;
 esac
-
 runtimePackages=(
 apt
 dpkg
@@ -44,43 +43,10 @@ x11-utils
 procps
 rsync
 fonts-wqy-microhei
+deepin-wine8-stable
+deepin-wine-helper
 )
-# deepin-wine8-stable相关依赖
-runtimePackages+=(
-libasound2
-libc6
-libdbus-1-3
-libgphoto2-6
-libgphoto2-port12
-libpulse0
-libudev1
-libunwind8
-libusb-1.0-0
-libwayland-client0
-libx11-6
-libxext6
-ocl-icd-libopencl1
-libasound2-plugins
-libncurses6
-)
-# deepin-wine-helper的相关依赖
-runtimePackage+=(
-p7zip-full  
-libc6  
-libdtkcore5  
-libdtkgui5  
-libdtkwidget5  
-libgcc1  
-libgl1  
-libqt5core5a  
-libqt5gui5  
-libqt5widgets5  
-libstdc++6  
-libx11-6  
-fonts-noto-cjk  
-python3-dbus  
-deepin-elf-verify
-)
+
 # 复制runtimePackage
 developPackages=("${runtimePackages[@]}")
 # 将数组拼接成字符串
