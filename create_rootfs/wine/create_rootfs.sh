@@ -14,10 +14,10 @@ module="$1"
 arch="$2"
 
 case $module in
-    runtime);;
+    binary);;
     develop);;
     "") echo "enter an module, like ./create_rootfs.sh runtime amd64" && exit;;
-    *) echo "unknow module \"$module\", supported module: runtime, develop" && exit;;
+    *) echo "unknow module \"$module\", supported module: binary, develop" && exit;;
 esac
 
 
@@ -91,7 +91,7 @@ function join_by {
 
 include=""
 case $module in
-    runtime)
+    binary)
         include=$(join_by , "${runtimePackages[@]}")
         ;;
     develop)
