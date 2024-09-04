@@ -63,7 +63,7 @@ libasound2-plugins
 libncurses6
 )
 # deepin-wine-helper的相关依赖
-runtimePackage+=(
+runtimePackages+=(
 p7zip-full  
 libc6  
 libdtkcore5  
