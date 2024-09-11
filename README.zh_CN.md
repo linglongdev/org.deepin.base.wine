@@ -1,3 +1,4 @@
+>最新版本在gitlab上，请联系王洪彪
 # Foundation
 
 Foundation 是玲珑的 base 镜像，包含用于运行容器的基础环境。
