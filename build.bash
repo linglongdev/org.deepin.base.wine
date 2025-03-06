@@ -69,6 +69,6 @@ for module in binary develop; do
     cp "linglong.yaml" "output/$module/"
 done
 
-# ll-builder list | grep "$APPID/$VERSION" | xargs ll-builder remove
-# ll-builder import-dir output/binary
-# ll-builder import-dir output/develop
+ll-builder list | grep "$APPID/$VERSION" | xargs ll-builder remove
+ll-builder import-dir output/binary
+ll-builder import-dir output/develop
