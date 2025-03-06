@@ -40,6 +40,7 @@ rm -rf output || true
 
 echo "[Content]" >mkosi.local.conf
 echo "Packages=$ARCH_PACKAGE" >>mkosi.local.conf
+cat wine/packages.conf >>mkosi.local.conf
 
 mkosi --force --output=image_binary
 echo "Packages=apt,elfutils,file,gcc,g++,gdb,gdbserver,cmake,make,automake,patchelf" >>mkosi.local.conf
