@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+dpkg -i /var/cache/apt/archives/libv4l-0_1.26.1-3deepin0_amd64.deb
 # 删除 /etc/localtime，由外部挂载不能是链接
 rm /buildroot/etc/localtime || true
 touch /buildroot/etc/localtime

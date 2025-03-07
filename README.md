@@ -7,5 +7,5 @@ build an bootstrap rootfs for linglong
 Build an debootstrap for org.deepin.base
 
 ```bash
-./build_base.sh amd64
+./build.bash amd64
 ```
